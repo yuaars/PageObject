@@ -6,6 +6,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.LoginPageByStatic;
 
+import java.net.MalformedURLException;
+
 import static helpers.WebDriverSingleton.getDriver;
 import static helpers.WebDriverSingleton.quit;
 
@@ -13,7 +15,7 @@ public class SingletonExampleTest {
     public static final String BASE_URL = "https://twitter.com/?lang=en-gb";
 
     @BeforeMethod
-    public void setup() {
+    public void setup() throws MalformedURLException {
         WebDriverSingleton.initDriver("chrome");
         getDriver().get(BASE_URL);
     }

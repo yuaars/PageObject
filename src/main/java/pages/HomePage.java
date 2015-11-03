@@ -11,7 +11,7 @@ public class HomePage {
     private final WebElement logoutButton;
     private final WebElement message;
 
-    public HomePage(WebDriver driver) {
+    public HomePage(WebDriver driver)  {
         this.driver = driver;
         logoutButton = driver.findElement(By.cssSelector("a.button"));
         message = driver.findElement(By.id("flash"));
